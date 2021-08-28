@@ -6,7 +6,7 @@ resource "aws_vpc" "myVPC" {
   }
 }
 
-#Create Internet Gateway
+#Create Internet Gateway: Used to make access your resouce in public 
 resource "aws_internet_gateway" "mygw" {
   vpc_id = aws_vpc.myVPC.id
 
@@ -15,7 +15,7 @@ resource "aws_internet_gateway" "mygw" {
   }
 }
 
-#Create Route Table
+#Create Route Table: To route traffic as per configuration 
 resource "aws_route_table" "my-route-table" {
   vpc_id = aws_vpc.myVPC.id
 
@@ -34,7 +34,7 @@ resource "aws_route_table" "my-route-table" {
   }
 }
 
-#Create Subnet
+#Create Subnet : Small Segment of big N/W
 resource "aws_subnet" "subnet-1" {
   vpc_id            = aws_vpc.myVPC.id
   cidr_block        = "10.0.1.0/24"
