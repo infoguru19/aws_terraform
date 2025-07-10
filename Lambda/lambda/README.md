@@ -1,3 +1,4 @@
+- Run this command to zip it:
 
 ```bash
 cd lambda
