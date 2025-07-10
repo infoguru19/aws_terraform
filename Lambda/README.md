@@ -4,8 +4,3 @@
 - Uses Node.js runtime (can be Python, Go, etc.)
 - Deploys Lambda in a specified region
 - Run this command to zip it:
-
-```bash
-cd lambda
-zip function.zip index.js 
-```
